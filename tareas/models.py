@@ -18,6 +18,6 @@ class hora_alarma(models.Model):
     alarma = models.ForeignKey(Alarma, blank=False, null=False,)
 
 
-class Compañero(models.Model):
+class Compa(models.Model):
     nombre = models.ForeignKey(User, blank=True, null=True)
     tarea = models.ForeignKey(Tarea, blank=True, null=True)
