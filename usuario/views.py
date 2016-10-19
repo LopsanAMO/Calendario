@@ -24,6 +24,18 @@ class Registar(View):
                 usu.save()
                 user = authenticate(username=request.POST.get('username'),password=request.POST.get('password'))
                 login(request, user)
-                return redirect('usuarios:index')
+                return redirect('usuario:index')
+            except:
+                return HttpResponseRedirect('.')
         else:
             return HttpResponseRedirect('.')
+
+class Login(View):
+    def get(self, request):
+        template_name = 'login.html'
+        form = LoginForm()
+        context = {
+            'form': form
+        }
+
+    def post(self, request):
