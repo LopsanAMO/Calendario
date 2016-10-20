@@ -56,6 +56,7 @@ class Index(View):
         template_name = 'index.html'
         registro = RegistroForm()
         login = LoginForm()
+        context = {
             'r_form': registro,
             'l_form': login,
         }

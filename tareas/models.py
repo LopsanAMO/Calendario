@@ -13,7 +13,7 @@ class Alarma(models.Model):
     nombre = models.CharField(max_length=100, blank=True, null=True)
     tarea = models.ForeignKey(Tarea, blank=False, null=False)
 
-class horaalarma(models.Model):
+class Hora(models.Model):
     hora = models.DateField(blank=False, null=False)
     fecha = models.DateField(blank=False, null=False)
     alarma = models.ForeignKey(Alarma, blank=False, null=False,)

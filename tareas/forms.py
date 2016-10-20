@@ -1,5 +1,5 @@
 from django import forms
-from .models import Tarea, Alarma, hora_alarma, Compa
+from .models import Tarea, Alarma, Hora, Compa
 
 class TareaForm(forms.ModelForm):
     class Meta:
@@ -11,9 +11,9 @@ class AlarmaForm(forms.ModelForm):
         model = Alarma
         fields = '__all__'
 
-class hora_alarmaForm(forms.ModelForm):
+class HoraForm(forms.ModelForm):
     class Meta:
-        model = hora_alarma
+        model = Hora
         fields = '__all__'
 
 class CompaForm(forms.ModelForm):
