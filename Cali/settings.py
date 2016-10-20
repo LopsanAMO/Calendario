@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'semestre',
     'tareas',
     'usuario',
-    'rest_framework'
+    #'rest_framework'
 ]
 
 MIDDLEWARE = [

@@ -4,11 +4,13 @@ from usuarios import urls as Userls
 from semestre import urls as Semeurls
 from materias import urls as Mateurls
 from tareas import urls as Tareaurls
+from examen import urls as Examenurls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^usuarios/', include(Userls, namespace='usuario')),
     url(r'^semestre/', include(Semeurls, namespace='semestre')),
     url(r'^materia/', include(Mateurls, namespace='materias')),
-    url(r'^tarea/', include(Tareaurls, namespace='tareas'))
+    url(r'^tarea/', include(Tareaurls, namespace='tareas')),
+    url(r'^examen/', include(Examenurls, namespace='examen'))
 ]

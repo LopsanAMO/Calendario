@@ -6,5 +6,5 @@ class Usuario(models.Model):
     tipo = models.CharField(null=False, blank=False, max_length=100)
 
 class qr(models.Model):
-    user models.OneToOneField(User, null=False, blank=False)
-    codigo = models.ImageField(null=True, blak=True)
+    user = models.OneToOneField(User, null=False, blank=False)
+    codigo = models.ImageField(null=True, blank=True)
