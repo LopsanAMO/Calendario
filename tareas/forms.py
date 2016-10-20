@@ -10,6 +10,7 @@ class AlarmaForm(forms.ModelForm):
     class Meta:
         model = Alarma
         fields = '__all__'
+        #cambiarle el name a nombre por nombre_alarma
 
 class HoraForm(forms.ModelForm):
     class Meta:
