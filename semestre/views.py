@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
-from .forms import Crear, Editar
+from .forms import Crear, Editar, Vacaciones
 
 class Semestre(View):
     def get(self, request):
@@ -26,6 +26,13 @@ class Semestre(View):
             form = Editar(request.POST)
             if form.is_valid():
                 print('tengo que hacer una funcion para actualizar datos')
+                return redirect('semestre:seme')
+            else:
+                return HttpResponseRedirect('.')
+        elif action == 'vaca':
+            form = Vacaciones(request.POSt)
+            if form.is_valid():
+                form.save()
                 return redirect('semestre:seme')
             else:
                 return HttpResponseRedirect('.')
