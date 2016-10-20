@@ -7,6 +7,7 @@ class Tarea(models.Model):
     materia = models.ForeignKey(Materia, blank=False, null=False)
     fecha_entrega = models.DateField(blank=False, null=False)
     prioridad = models.CharField(max_length=50, blank=False, null=False)
+    descripcion = models.CharField(max_length=250, blank=False, null=False)
 
 class Alarma(models.Model):
     nombre = models.CharField(max_length=100, blank=True, null=True)
